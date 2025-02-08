@@ -1,8 +1,12 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:moteis/domain/entities/motel.dart';
 import 'package:moteis/infra/models/suite_response.dart';
 
+part 'motel_response.g.dart';
+
+@JsonSerializable(createToJson: false)
 class MotelResponse {
-  MotelResponse({
+  const MotelResponse({
     required this.fantasia,
     required this.logo,
     required this.bairro,
@@ -12,6 +16,9 @@ class MotelResponse {
     required this.qtdAvaliacoes,
     required this.media,
   });
+
+  factory MotelResponse.fromJson(Map<String, dynamic> json) =>
+      _$MotelResponseFromJson(json);
 
   final String fantasia;
   final String logo;
