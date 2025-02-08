@@ -1,5 +1,5 @@
 class SuitePeriod {
-  SuitePeriod({
+  const SuitePeriod({
     required this.time,
     required this.formattedTime,
     required this.price,

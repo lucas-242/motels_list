@@ -1,4 +1,19 @@
+import 'package:moteis/domain/entities/motel.dart';
+
 abstract class MotelsMock {
+  static const motels = <Motel>[
+    Motel(
+      name: 'Test',
+      logo: '',
+      address: '',
+      distance: 1,
+      favoriteNumber: 1,
+      suites: [],
+      feedbackNumber: 1,
+      rating: 1,
+    ),
+  ];
+
   static const emptyMotelsResponse = {
     'sucesso': true,
     'data': {

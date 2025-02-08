@@ -2,7 +2,7 @@ import 'package:moteis/domain/entities/suite_category_item.dart';
 import 'package:moteis/domain/entities/suite_period.dart';
 
 class Suite {
-  Suite({
+  const Suite({
     required this.name,
     required this.availableNumber,
     required this.showAvailableNumber,

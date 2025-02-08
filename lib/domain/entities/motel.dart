@@ -1,7 +1,7 @@
 import 'package:moteis/domain/entities/suite.dart';
 
 class Motel {
-  Motel({
+  const Motel({
     required this.name,
     required this.logo,
     required this.address,
