@@ -10,4 +10,6 @@ abstract class AppColors {
   static const white = Color(0xFFF6F5F5);
   static const grey = Color(0xFF9E9E9E);
   static const background = Color(0xFFECECEC);
+  static const shimmer = Color.fromRGBO(0, 0, 0, 0.4);
+  static const loading = Color.fromRGBO(0, 0, 0, 0.4);
 }

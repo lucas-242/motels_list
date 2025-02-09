@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moteis/presenter/home/components/motel_info.dart';
 import 'package:moteis/presenter/home/components/suite_list.dart';
 import 'package:moteis/presenter/home/cubit/home_cubit.dart';
+import 'package:moteis/presenter/home/pages/loading_page.dart';
 
 class MotelList extends StatelessWidget {
   const MotelList({super.key});
@@ -14,7 +15,7 @@ class MotelList extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         if (state is HomeLoading) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(child: LoadingPage());
         }
 
         return ListView.builder(
