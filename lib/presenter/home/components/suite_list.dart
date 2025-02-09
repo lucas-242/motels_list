@@ -3,6 +3,7 @@ import 'package:moteis/core/theme/theme.dart';
 import 'package:moteis/domain/entities/suite.dart';
 import 'package:moteis/presenter/home/components/suite_image.dart';
 import 'package:moteis/presenter/home/components/suite_items.dart';
+import 'package:moteis/presenter/home/components/suite_period_card.dart';
 
 class SuiteList extends StatelessWidget {
   const SuiteList({super.key, required this.suites});
@@ -14,6 +15,7 @@ class SuiteList extends StatelessWidget {
     return SizedBox(
       height: context.height,
       child: ListView.builder(
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: suites.length,
         itemBuilder: (context, index) {
@@ -34,6 +36,9 @@ class SuiteList extends StatelessWidget {
                   mainItems: suite.categoryItems,
                   otherItems: suite.items,
                 ),
+                for (final period in suite.periods) ...[
+                  SuitePeriodCard(period: period),
+                ],
               ],
             ),
           );

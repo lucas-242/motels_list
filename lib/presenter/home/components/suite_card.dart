@@ -9,7 +9,7 @@ class SuiteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: context.width * .9,
+      width: context.width * .89,
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(AppInsets.xs),

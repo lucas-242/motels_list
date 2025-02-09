@@ -14,4 +14,10 @@ class SuitePeriod {
   final double totalPrice;
   final bool hasGift;
   final double? discount;
+
+  int get discountPercentage {
+    if (discount == null) return 0;
+
+    return ((discount! * 100) / price).round();
+  }
 }
