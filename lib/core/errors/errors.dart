@@ -7,7 +7,3 @@ abstract class AppError implements Exception {
 class ExternalError extends AppError {
   ExternalError(super.message, {super.trace});
 }
-
-class ClientError extends AppError {
-  ClientError(super.message, {super.trace});
-}
