@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       },
       child: const Scaffold(
         body: SafeArea(
-          child: MotelList(),
+          child: SingleChildScrollView(child: MotelList()),
         ),
       ),
     );

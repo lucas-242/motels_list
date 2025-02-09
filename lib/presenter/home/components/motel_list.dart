@@ -18,6 +18,8 @@ class MotelList extends StatelessWidget {
         }
 
         return ListView.builder(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
           itemCount: cubit.state.motels.length,
           itemBuilder: (context, index) {
             final motel = cubit.state.motels[index];
