@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moteis/core/theme/settings/app_insets.dart';
-import 'package:moteis/core/theme/settings/app_spacings.dart';
 import 'package:moteis/core/theme/theme.dart';
 
 class RatingIcon extends StatelessWidget {
