@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moteis/core/theme/theme.dart';
 import 'package:moteis/domain/entities/suite.dart';
 import 'package:moteis/presenter/home/components/suite_image.dart';
+import 'package:moteis/presenter/home/components/suite_items.dart';
 
 class SuiteList extends StatelessWidget {
   const SuiteList({super.key, required this.suites});
@@ -26,8 +27,13 @@ class SuiteList extends StatelessWidget {
               right: isLast ? AppInsets.xl : 0,
             ),
             child: Column(
+              spacing: AppInsets.xxs,
               children: [
                 SuiteImage(suite: suite),
+                SuiteItems(
+                  mainItems: suite.categoryItems,
+                  otherItems: suite.items,
+                ),
               ],
             ),
           );
