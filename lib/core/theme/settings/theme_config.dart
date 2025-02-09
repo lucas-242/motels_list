@@ -12,5 +12,17 @@ abstract class ThemeConfig {
           bodyMedium: AppTextStyles.text,
           bodySmall: AppTextStyles.caption,
         ),
+        cardTheme: _cardTheme(),
+      );
+
+  static CardTheme _cardTheme() => CardTheme(
+        elevation: 0,
+        color: AppColors.white,
+        surfaceTintColor: AppColors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppInsets.sm),
+        ),
+        margin: EdgeInsets.zero,
+        clipBehavior: Clip.antiAlias,
       );
 }

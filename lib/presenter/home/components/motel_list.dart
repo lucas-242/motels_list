@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moteis/presenter/home/components/motel_info.dart';
+import 'package:moteis/presenter/home/components/suite_list.dart';
 import 'package:moteis/presenter/home/cubit/home_cubit.dart';
 
-class MotelsList extends StatelessWidget {
-  const MotelsList({super.key});
+class MotelList extends StatelessWidget {
+  const MotelList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class MotelsList extends StatelessWidget {
             return Column(
               children: [
                 MotelInfo(motel: motel),
+                SuiteList(suites: motel.suites),
               ],
             );
           },

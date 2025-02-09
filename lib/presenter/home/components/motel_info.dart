@@ -12,7 +12,10 @@ class MotelInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+      padding: const EdgeInsets.symmetric(
+        horizontal: AppInsets.xl,
+        vertical: AppInsets.lg,
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,13 +39,13 @@ class MotelInfo extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 12),
+              AppSpacings.verticalMd,
               Row(
-                spacing: 10,
+                spacing: AppInsets.sm,
                 children: [
                   RatingIcon(rating: motel.rating),
                   Row(
-                    spacing: 2,
+                    spacing: AppInsets.xxxs,
                     children: [
                       Text(
                         '${motel.feedbackNumber} avaliações',

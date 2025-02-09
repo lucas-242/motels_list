@@ -12,7 +12,8 @@ class ImageSelector extends StatelessWidget {
     this.fit = BoxFit.fill,
     this.filterQuality = FilterQuality.medium,
     this.placeholderWidget,
-  });
+    double borderRadius = AppInsets.sm,
+  }) : borderRadius = BorderRadius.circular(borderRadius);
 
   final String url;
   final Widget? placeholderWidget;
@@ -22,7 +23,7 @@ class ImageSelector extends StatelessWidget {
   final BoxFit fit;
   final FilterQuality filterQuality;
 
-  final borderRadius = BorderRadius.circular(12);
+  late final BorderRadius borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,10 @@ class ImageSelector extends StatelessWidget {
       fit: fit,
       height: height,
       width: width,
+      imageBuilder: (context, imageProvider) => ClipRRect(
+        borderRadius: borderRadius,
+        child: Image(image: imageProvider, fit: fit),
+      ),
       errorWidget: (context, url, error) => _defaultImage,
     );
   }

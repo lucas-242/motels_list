@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moteis/injector.dart';
-import 'package:moteis/presenter/home/components/motels_list.dart';
+import 'package:moteis/presenter/home/components/motel_list.dart';
 import 'package:moteis/presenter/home/cubit/home_cubit.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       },
       child: const Scaffold(
         body: SafeArea(
-          child: MotelsList(),
+          child: MotelList(),
         ),
       ),
     );
