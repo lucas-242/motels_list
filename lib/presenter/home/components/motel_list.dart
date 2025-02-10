@@ -25,6 +25,7 @@ class MotelList extends StatelessWidget {
           itemBuilder: (context, index) {
             final motel = cubit.state.motels[index];
             return Column(
+              key: ValueKey('motel-$index'),
               children: [
                 MotelInfo(motel: motel),
                 SuiteList(suites: motel.suites),

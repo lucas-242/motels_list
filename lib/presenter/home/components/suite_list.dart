@@ -24,6 +24,7 @@ class SuiteList extends StatelessWidget {
           final isLast = index == suites.length - 1;
 
           return Padding(
+            key: ValueKey('suite-$index'),
             padding: EdgeInsets.only(
               left: isFirst ? AppInsets.xl : AppInsets.md,
               right: isLast ? AppInsets.xl : 0,
