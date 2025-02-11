@@ -14,7 +14,7 @@ class SuiteItemsPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: AppInsets.xxxl),
+          padding: const EdgeInsets.only(top: AppInsets.xxxl),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: AppInsets.xl,

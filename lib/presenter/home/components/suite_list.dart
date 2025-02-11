@@ -4,6 +4,7 @@ import 'package:moteis/domain/entities/suite.dart';
 import 'package:moteis/presenter/home/components/suite_image.dart';
 import 'package:moteis/presenter/home/components/suite_items.dart';
 import 'package:moteis/presenter/home/components/suite_period_card.dart';
+import 'package:moteis/presenter/home/pages/suite_images_page.dart';
 import 'package:moteis/presenter/home/pages/suite_items_page.dart';
 
 class SuiteList extends StatelessWidget {
@@ -33,9 +34,16 @@ class SuiteList extends StatelessWidget {
             child: Column(
               spacing: AppInsets.xxs,
               children: [
-                SuiteImage(suite: suite),
-                TextButton(
-                  onPressed: () => Scaffold.of(context).showBottomSheet(
+                GestureDetector(
+                  onTap: () => Scaffold.of(context).showBottomSheet(
+                    backgroundColor: AppColors.background,
+                    enableDrag: false,
+                    (context) => SuiteImagesPage(suite: suite),
+                  ),
+                  child: SuiteImage(suite: suite),
+                ),
+                GestureDetector(
+                  onTap: () => Scaffold.of(context).showBottomSheet(
                     backgroundColor: AppColors.background,
                     enableDrag: false,
                     (context) => SuiteItemsPage(suite: suite),
