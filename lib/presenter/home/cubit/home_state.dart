@@ -4,6 +4,15 @@ sealed class HomeState {
   HomeState(this.motels);
 
   final List<Motel> motels;
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    return other is HomeState && listEquals(other.motels, motels);
+  }
+
+  @override
+  int get hashCode => motels.hashCode;
 }
 
 final class HomeInitial extends HomeState {

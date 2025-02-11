@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:moteis/core/errors/errors.dart';
 import 'package:moteis/domain/entities/motel.dart';
 import 'package:moteis/domain/use_cases/get_motels_use_case.dart';

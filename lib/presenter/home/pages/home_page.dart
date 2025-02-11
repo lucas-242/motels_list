@@ -12,17 +12,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final cubit = Injector.get<HomeCubit>();
+
+  @override
+  void initState() {
+    cubit.getMotels();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) {
-        final cubit = Injector.get<HomeCubit>();
-        cubit.getMotels();
-        return cubit;
-      },
-      child: const Scaffold(
+      create: (context) => cubit,
+      child: Scaffold(
         body: SafeArea(
-          child: SingleChildScrollView(child: MotelList()),
+          child: MotelList(),
         ),
       ),
     );
