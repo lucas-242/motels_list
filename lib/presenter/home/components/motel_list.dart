@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moteis/presenter/home/components/motel_info.dart';
 import 'package:moteis/presenter/home/components/suite_list.dart';
-import 'package:moteis/presenter/home/cubit/home_cubit.dart';
+import 'package:moteis/presenter/home/cubits/home_cubit.dart';
 import 'package:moteis/presenter/home/pages/loading_page.dart';
 
 class MotelList extends StatelessWidget {

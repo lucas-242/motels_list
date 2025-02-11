@@ -4,7 +4,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:moteis/core/errors/errors.dart';
 import 'package:moteis/domain/use_cases/get_motels_use_case.dart';
-import 'package:moteis/presenter/home/cubit/home_cubit.dart';
+import 'package:moteis/presenter/home/cubits/home_cubit.dart';
 
 import '../../../mock/motels_mock.dart';
 import 'home_cubit_test.mocks.dart';

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moteis/core/components/image_selector.dart';
 import 'package:moteis/core/theme/theme.dart';
 import 'package:moteis/domain/entities/suite.dart';
+import 'package:moteis/presenter/home/pages/suite_image_viewer.dart';
 
 class SuiteImagesPage extends StatelessWidget {
   const SuiteImagesPage({super.key, required this.suite});
@@ -43,12 +44,22 @@ class SuiteImagesPage extends StatelessWidget {
                     final image = suite.images[index];
                     return Padding(
                       padding: const EdgeInsets.only(bottom: AppInsets.sm),
-                      child: ImageSelector(
-                        url: image,
-                        fit: BoxFit.cover,
-                        height: context.height * .25,
-                        width: context.width,
-                        borderRadius: 0,
+                      child: GestureDetector(
+                        onTap: () => Scaffold.of(context).showBottomSheet(
+                          backgroundColor: AppColors.background,
+                          enableDrag: false,
+                          (context) => SuiteImageViewer(
+                            suite: suite,
+                            initialIndex: index,
+                          ),
+                        ),
+                        child: ImageSelector(
+                          url: image,
+                          fit: BoxFit.cover,
+                          height: context.height * .25,
+                          width: context.width,
+                          borderRadius: 0,
+                        ),
                       ),
                     );
                   },

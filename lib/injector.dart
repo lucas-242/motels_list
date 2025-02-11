@@ -4,7 +4,7 @@ import 'package:moteis/core/network/network_service.dart';
 import 'package:moteis/domain/repositories/motel_repository.dart';
 import 'package:moteis/domain/use_cases/get_motels_use_case.dart';
 import 'package:moteis/infra/repositories/motel_repository_impl.dart';
-import 'package:moteis/presenter/home/cubit/home_cubit.dart';
+import 'package:moteis/presenter/home/cubits/home_cubit.dart';
 
 abstract class Injector {
   static final _i = GetIt.instance;
