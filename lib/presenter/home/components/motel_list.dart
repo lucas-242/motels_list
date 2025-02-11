@@ -19,24 +19,27 @@ class MotelList extends StatelessWidget {
           return const Center(child: LoadingPage());
         }
 
-        return CustomScrollView(
-          slivers: [
-            SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  final motel = cubit.state.motels[index];
-                  return Column(
-                    key: ValueKey('motel-$index'),
-                    children: [
-                      MotelInfo(motel: motel),
-                      SuiteList(suites: motel.suites),
-                    ],
-                  );
-                },
-                childCount: cubit.state.motels.length,
+        return RefreshIndicator(
+          onRefresh: cubit.getMotels,
+          child: CustomScrollView(
+            slivers: [
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final motel = cubit.state.motels[index];
+                    return Column(
+                      key: ValueKey('motel-$index'),
+                      children: [
+                        MotelInfo(motel: motel),
+                        SuiteList(suites: motel.suites),
+                      ],
+                    );
+                  },
+                  childCount: cubit.state.motels.length,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         );
       },
     );
