@@ -24,39 +24,43 @@ class MotelInfo extends StatelessWidget {
             borderRadius: BorderRadius.circular(50),
             child: ImageSelector(url: motel.logo, height: 50, width: 50),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(motel.name, style: AppTextStyles.title),
-              Text.rich(
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                softWrap: true,
-                TextSpan(
-                  text: '${motel.distance} km - ',
-                  children: [
-                    TextSpan(text: motel.address),
-                  ],
-                ),
-              ),
-              AppSpacings.verticalMd,
-              Row(
-                spacing: AppInsets.sm,
-                children: [
-                  RatingIcon(rating: motel.rating),
-                  Row(
-                    spacing: AppInsets.xxxs,
+          SizedBox(width: AppInsets.sm),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(motel.name, style: AppTextStyles.title),
+                Text.rich(
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: true,
+                  TextSpan(
+                    text: '${motel.distance} km - ',
                     children: [
-                      Text(
-                        '${motel.feedbackNumber} avaliações',
-                        style: AppTextStyles.caption,
-                      ),
-                      Icon(Icons.arrow_drop_down),
+                      TextSpan(text: motel.address),
                     ],
                   ),
-                ],
-              ),
-            ],
+                ),
+                AppSpacings.verticalMd,
+                Row(
+                  spacing: AppInsets.sm,
+                  children: [
+                    RatingIcon(rating: motel.rating),
+                    Row(
+                      spacing: AppInsets.xxxs,
+                      children: [
+                        Text(
+                          '${motel.feedbackNumber} avaliações',
+                          style: AppTextStyles.caption,
+                        ),
+                        Icon(Icons.arrow_drop_down),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
           IconButton(
             onPressed: () {},

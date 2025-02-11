@@ -12,13 +12,13 @@ class SuiteImagesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     const iconSize = 40.0;
 
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
           padding: const EdgeInsets.only(top: AppInsets.xxxl),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            spacing: AppInsets.md,
+            spacing: AppInsets.xxs,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,14 +27,15 @@ class SuiteImagesPage extends StatelessWidget {
                     onPressed: Navigator.of(context).pop,
                     icon: Icon(Icons.arrow_drop_down, size: iconSize),
                   ),
-                  Text(
-                    suite.name,
-                    style: AppTextStyles.bodyBig,
-                    softWrap: true,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
+                  Expanded(
+                    child: Text(
+                      suite.name,
+                      style: AppTextStyles.bodyBig,
+                      softWrap: true,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
-                  SizedBox(width: iconSize),
                 ],
               ),
               Expanded(

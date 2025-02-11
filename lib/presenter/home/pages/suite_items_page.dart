@@ -11,10 +11,10 @@ class SuiteItemsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.only(top: AppInsets.xxxl),
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(top: AppInsets.xl),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: AppInsets.xl,

@@ -36,9 +36,9 @@ class _SuiteImageViewerState extends State<SuiteImageViewer> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => _cubit,
-      child: SafeArea(
-        child: Scaffold(
-          body: Padding(
+      child: Scaffold(
+        body: SafeArea(
+          child: Padding(
             padding: const EdgeInsets.only(top: AppInsets.xxxl),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

@@ -27,27 +27,29 @@ class ImageControllerButtons extends StatelessWidget {
           onPressed: onPrevious,
           icon: Icon(Icons.chevron_left),
         ),
-        Column(
-          spacing: AppInsets.xxs,
-          children: [
-            Text(
-              suite.name,
-              style: AppTextStyles.bodyBig,
-              softWrap: true,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-            BlocBuilder<ImageViewerCubit, ImageViewerState>(
-              buildWhen: (previous, current) =>
-                  previous.currentIndex != current.currentIndex,
-              builder: (context, state) {
-                return Text(
-                  '${state.currentIndex + 1} / ${suite.images.length}',
-                  style: AppTextStyles.body,
-                );
-              },
-            ),
-          ],
+        Expanded(
+          child: Column(
+            spacing: AppInsets.xxs,
+            children: [
+              Text(
+                suite.name,
+                style: AppTextStyles.bodyBig,
+                softWrap: true,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              BlocBuilder<ImageViewerCubit, ImageViewerState>(
+                buildWhen: (previous, current) =>
+                    previous.currentIndex != current.currentIndex,
+                builder: (context, state) {
+                  return Text(
+                    '${state.currentIndex + 1} / ${suite.images.length}',
+                    style: AppTextStyles.body,
+                  );
+                },
+              ),
+            ],
+          ),
         ),
         IconButton(
           onPressed: onNext,
