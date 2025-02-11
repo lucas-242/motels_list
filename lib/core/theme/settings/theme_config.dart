@@ -8,11 +8,12 @@ abstract class ThemeConfig {
           surface: AppColors.background,
         ),
         textTheme: TextTheme(
-          displayLarge: AppTextStyles.text,
-          bodyMedium: AppTextStyles.text,
+          displayLarge: AppTextStyles.body,
+          bodyMedium: AppTextStyles.body,
           bodySmall: AppTextStyles.caption,
         ),
         cardTheme: _cardTheme(),
+        dividerTheme: _dividerTheme(),
       );
 
   static CardTheme _cardTheme() => CardTheme(
@@ -24,5 +25,11 @@ abstract class ThemeConfig {
         ),
         margin: EdgeInsets.zero,
         clipBehavior: Clip.antiAlias,
+      );
+
+  static DividerThemeData _dividerTheme() => DividerThemeData(
+        color: AppColors.divider,
+        space: AppInsets.sm,
+        thickness: 1,
       );
 }

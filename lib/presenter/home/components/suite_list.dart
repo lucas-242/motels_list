@@ -4,6 +4,7 @@ import 'package:moteis/domain/entities/suite.dart';
 import 'package:moteis/presenter/home/components/suite_image.dart';
 import 'package:moteis/presenter/home/components/suite_items.dart';
 import 'package:moteis/presenter/home/components/suite_period_card.dart';
+import 'package:moteis/presenter/home/pages/suite_items_page.dart';
 
 class SuiteList extends StatelessWidget {
   const SuiteList({super.key, required this.suites});
@@ -33,9 +34,16 @@ class SuiteList extends StatelessWidget {
               spacing: AppInsets.xxs,
               children: [
                 SuiteImage(suite: suite),
-                SuiteItems(
-                  mainItems: suite.categoryItems,
-                  otherItems: suite.items,
+                TextButton(
+                  onPressed: () => Scaffold.of(context).showBottomSheet(
+                    backgroundColor: AppColors.background,
+                    enableDrag: false,
+                    (context) => SuiteItemsPage(suite: suite),
+                  ),
+                  child: SuiteItems(
+                    mainItems: suite.categoryItems,
+                    otherItems: suite.items,
+                  ),
                 ),
                 for (final period in suite.periods) ...[
                   SuitePeriodCard(period: period),

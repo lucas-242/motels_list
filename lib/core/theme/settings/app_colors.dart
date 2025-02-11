@@ -11,5 +11,5 @@ abstract class AppColors {
   static const grey = Color(0xFF9E9E9E);
   static const background = Color(0xFFECECEC);
   static const shimmer = Color.fromRGBO(0, 0, 0, 0.4);
-  static const loading = Color.fromRGBO(0, 0, 0, 0.4);
+  static const divider = Color.fromRGBO(158, 158, 158, .5);
 }

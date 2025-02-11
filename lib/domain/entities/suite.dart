@@ -19,4 +19,6 @@ class Suite {
   final List<String> items;
   final List<SuiteCategoryItem> categoryItems;
   final List<SuitePeriod> periods;
+
+  String get itemsNormalized => items.join(', ');
 }

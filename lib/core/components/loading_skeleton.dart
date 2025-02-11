@@ -17,7 +17,7 @@ class LoadingSkeleton extends StatelessWidget {
         width: width,
         padding: const EdgeInsets.all(AppInsets.xs),
         decoration: BoxDecoration(
-          color: AppColors.loading,
+          color: AppColors.shimmer,
           borderRadius: const BorderRadius.all(Radius.circular(AppInsets.md)),
         ),
       ),
