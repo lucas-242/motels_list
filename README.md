@@ -1,16 +1,65 @@
-# moteis
+# Moteis
 
-A new Flutter project.
+## Descrição
+Moteis é um aplicativo Flutter desenvolvido para listar motéis e suas respectivas suítes, permitindo a visualização detalhada dos itens disponíveis em cada suíte. O aplicativo segue os princípios da arquitetura limpa (Clean Architecture) e utiliza o BLoC para gerenciamento de estado. Além disso, conta com abstrações para comunicação com a rede e testes unitários para a lógica de negócio.
 
-## Getting Started
+## Funcionalidades e Tecnologias
+- **Listagem de motéis e suítes**
+- **Visualização de itens presentes nas suítes**
+- **Tela de visualização de imagens das suítes**
+- **Loading com Shimmer Effect**
 
-This project is a starting point for a Flutter application.
+## Tecnologias Utilizadas
+- **Clean Architecture**
+- **Testes Unitários**
+- **BLoC (Business Logic Component)**
+- **Abstração para as dependências externas**
+- **Cache para imagens**
+- **Injeção de dependência**
 
-A few resources to get you started if this is your first Flutter project:
+## Estrutura do Projeto
+```
+lib/
+|-- core/                # Configurações gerais e abstrações
+|-- infra/               # Repositórios e fontes de dados
+|-- domain/              # Entidades e casos de uso
+|-- presentation/        # Camada de UI e gerenciamento de estado separados por funcionalidades
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Como Executar
+1. **Clone o repositório**
+```sh
+  git clone https://github.com/lucas-242/motels_list.git
+  cd motels_list
+```
+2. **Instale as dependências**
+```sh
+  flutter pub get
+```
+3. **Execute o aplicativo**
+```sh
+  flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Testes
+Para rodar os testes unitários, utilize o comando:
+```sh
+  flutter test
+```
+
+## Imagens do Aplicativo
+
+### Tela de loading
+![Tela de Loading](assets/images/loading.jpg)
+
+### Tela Inicial
+![Tela Inicial](assets/images/lista.jpg)
+
+### Tela de itens da suíte
+![Tela de itens da suíte](assets/images/itens_suite.jpg)
+
+### Tela de imagens da suíte
+![Tela de imagens da suíte](assets/images/imagens_suite.jpg)
+
+### Tela de detalhe da imagem
+![Tela de detalhe da imagem](assets/images/imagem_detalhes.jpg)
