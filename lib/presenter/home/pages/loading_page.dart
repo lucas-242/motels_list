@@ -15,12 +15,21 @@ class LoadingPage extends StatelessWidget {
       child: Column(
         spacing: AppInsets.xs,
         children: [
-          LoadingSkeleton(
-            height: context.height * .12,
-            width: context.width,
+          Row(
+            spacing: AppInsets.sm,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipOval(
+                child: LoadingSkeleton(
+                  height: context.height * .07,
+                  width: context.height * .07,
+                ),
+              ),
+              Expanded(child: LoadingSkeleton(height: context.height * .12)),
+            ],
           ),
           LoadingSkeleton(
-            height: context.height * .33,
+            height: context.height * .3,
             width: context.width,
           ),
           ...List.generate(
