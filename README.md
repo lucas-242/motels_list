@@ -63,3 +63,9 @@ Para rodar os testes unitários, utilize o comando:
 
 ### Tela de detalhe da imagem
 ![Tela de detalhe da imagem](assets/images/imagem_detalhes.jpg)
+
+
+## Vídeo do Aplicativo
+[Assistir vídeo completo](assets/imagens/app_video.mp4)
+
+![Gif](assets/images/app_video.GIF)
