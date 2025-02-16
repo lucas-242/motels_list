@@ -66,6 +66,6 @@ Para rodar os testes unitários, utilize o comando:
 
 
 ## Vídeo do Aplicativo
-[Assistir vídeo completo](assets/imagens/app_video.mp4)
+[Assistir vídeo completo](assets/images/app_video.mp4)
 
 ![Gif](assets/images/app_video.GIF)
